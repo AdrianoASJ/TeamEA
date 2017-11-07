@@ -1,13 +1,14 @@
 package teamea
 
-class Campeonato {
+public interface Campeonato {
 	
 	String nome
-	Boolean nacional
-	
-	static hasMany = [edicoes: Edicao]
+	int valorDeInscricao
+	String premio
+	int diaMes
 
-    static constraints = {
-		nome minSize: 5, maxSize: 20 
-    }
+	public String function dia();
+	static constraints = {
+    }	
+	 
 }
